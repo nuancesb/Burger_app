@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  meat_rating: 1
+  cheese_rating: 1
+  toppings_rating: 1
+  bun_rating: 1
+  user_id: 1
+  burger_id: 1
+
+two:
+  meat_rating: 1
+  cheese_rating: 1
+  toppings_rating: 1
+  bun_rating: 1
+  user_id: 1
+  burger_id: 1

@@ -1,0 +1,35 @@
+<h1>Listing ratings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Meat rating</th>
+      <th>Cheese rating</th>
+      <th>Toppings rating</th>
+      <th>Bun rating</th>
+      <th>User</th>
+      <th>Burger</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ratings.each do |rating| %>
+      <tr>
+        <td><%= rating.meat_rating %></td>
+        <td><%= rating.cheese_rating %></td>
+        <td><%= rating.toppings_rating %></td>
+        <td><%= rating.bun_rating %></td>
+        <td><%= rating.user_id %></td>
+        <td><%= rating.burger_id %></td>
+        <td><%= link_to 'Show', rating %></td>
+        <td><%= link_to 'Edit', edit_rating_path(rating) %></td>
+        <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Rating', new_rating_path %>
