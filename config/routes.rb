@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   root 'home#index'
   
   devise_for :users
-
-  get  '/home/about_us', to: "home#about_us", as: 'about_us'
-  get  '/home/gallery', to: "home#gallery", as: 'gallery'
-  get '/home/review_a_burger', to: "home#review_a_burger", as:'review_a_burger'
-  get '/home/faq', to: "home#faq", as:'faq'
+  get  '/my_profile', to: "home#my_profile", as: 'my_profile'
+  get  '/about_us', to: "home#about_us", as: 'about_us'
+  get  '/gallery', to: "home#gallery", as: 'gallery'
+  get '/review_a_burger', to: "home#review_a_burger", as:'review_a_burger'
+  get '/faq', to: "home#faq", as:'faq'
+  get '/london_burger_map', to: "home#london_burger_map", as:'london_burger_map'
 
 
   resources :ratings
