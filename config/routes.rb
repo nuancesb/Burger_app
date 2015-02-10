@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+
   root 'home#index'
+  
+  devise_for :users
+
+  get  '/home/about_us', to: "home#about_us", as: 'about_us'
+  get  '/home/gallery', to: "home#gallery", as: 'gallery'
+  get '/home/review_a_burger', to: "home#review_a_burger", as:'review_a_burger'
+  get '/home/faq', to: "home#faq", as:'faq'
+
 
   resources :ratings
 

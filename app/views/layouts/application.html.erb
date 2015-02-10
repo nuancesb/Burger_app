@@ -13,13 +13,20 @@
         <%= current_user.email %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <% end %>
-    </div>
-
-
+  </div>
+  <br>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-
+  <nav>
+    <ul>
+      <li><a href='/my_profile'>My profile</a></li>
+      <li><a href='/about_us'>About Us</a></li>
+      <li><a href='/gallery'>Gallery</a></li>
+      <li><a href='/review_a_burger'>Review a burger</a></li>
+      <li><a href='/london_burger_map'>London Burger Map</a></li>
+      <li><a href='/faq'>FAQ</a></li>
+    </ul>
+  </nav>
 
 <%= yield %>
 
