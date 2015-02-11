@@ -1,14 +1,19 @@
-<p>
+<!-- <p>
   <b>Image:</b>
   <%= image_tag @user.image.thumb.url %>
-</p>
+</p> -->
 <p>
   <b>Image:</b>
   <%= image_tag @user.image.detail.url %>
 </p>
 <br>
+<p>
+  <%= @user.description %>
+<p>
+<br>
 <% if @user == current_user %>
 
 <li><%= link_to "Edit", edit_user_registration_path(@user)%></li>
+<li><%= link_to 'Back to home', root_path %><li>
 <% end %>
 

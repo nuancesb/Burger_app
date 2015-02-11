@@ -28,7 +28,7 @@
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
-
+  <br>
 
   <div class="field">
 
@@ -37,8 +37,13 @@
     <%= f.file_field :image %>
     <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
   </div>
+  <br>
 
-
+  <div class="field">
+    <%= f.label :description, 'Your profile description: ' %> 
+    <%= f.text_field :description %>
+  </div>
+  <br>
 
 
 
