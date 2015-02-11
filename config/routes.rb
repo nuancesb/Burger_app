@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root 'home#index'
   
-  devise_for :users
+  devise_for :users, controllers: {registrations: 'registrations'}
   get  '/my_profile', to: "home#my_profile", as: 'my_profile'
   get  '/about_us', to: "home#about_us", as: 'about_us'
   get  '/gallery', to: "home#gallery", as: 'gallery'
