@@ -19,7 +19,8 @@
   <p class="alert"><%= alert %></p>
   <nav>
     <ul>
-      <li><a href='/my_profile'>My profile</a></li>
+      <li><%= link_to "My profile", user_path(current_user.id)  %></li>
+     
       <li><a href='/about_us'>About Us</a></li>
       <li><a href='/gallery'>Gallery</a></li>
       <li><a href='/review_a_burger'>Review a burger</a></li>
