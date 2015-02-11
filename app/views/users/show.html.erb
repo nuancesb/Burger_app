@@ -1,1 +1,10 @@
-show.html.erb
+<p>
+  <b>Image:</b>
+  <%= image_tag @user.image.url %>
+</p>
+<br>
+<% if @user == current_user %>
+
+<li><%= link_to "Edit"%></li>
+<% end %>
+
