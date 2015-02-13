@@ -9,7 +9,7 @@ class RatingsController < ApplicationController
   end
 
   # GET /ratings/1
-  # GET /ratings/1.json
+  # GET /ratings/1.jsonuuu
   def show
   end
 
@@ -27,7 +27,7 @@ class RatingsController < ApplicationController
   def create
     @rating = @burger.ratings.new(rating_params)
     @rating.user = current_user
-    
+
     respond_to do |format|
       if @rating.save
         format.html { redirect_to @burger, notice: 'Rating was successfully created.' }
