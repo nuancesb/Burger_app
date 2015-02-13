@@ -11,9 +11,25 @@
 </p>
 
 <p>
-  <strong>Profile picture:</strong>
-  <%= @burger.profile_picture %>
+  <strong>picture:</strong>
+  <%= image_tag@burger.profile_picture.detail.url %>
 </p>
 
-<%= link_to 'Edit', edit_burger_path(@burger) %> |
+
+<p>
+  <strong>burgers rating:</strong><br>
+  <% @burger.ratings.each do |rating| %>
+    <tr>
+      <td>meat rating: <%= rating.meat_rating %></td><br>
+      <td>cheese rating: <%= rating.cheese_rating %></td><br>
+      <td>toppings rating: <%= rating.toppings_rating %></td><br>
+      <td>bun_rating: <%= rating.bun_rating %></td><br>
+      <td>user email: <%= rating.user.email %></td><br>
+
+    </tr>
+      <% end %>
+</p>
+
+<%= link_to 'Add a review to this burger', new_burger_rating_path(@burger) %> |
+<%= link_to 'review a new burger', new_burger_path %> |
 <%= link_to 'Back', burgers_path %>

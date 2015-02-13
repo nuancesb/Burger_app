@@ -23,7 +23,18 @@
     <%= f.label :profile_picture %><br>
     <%= f.text_field :profile_picture %>
   </div>
+
+  <div class="field">
+
+    <%= f.label :profile_picture, 'Select the image file or url:' %><br>
+    
+    <%= f.file_field :profile_picture %>
+    <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
+  </div>
+  <br>
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
+

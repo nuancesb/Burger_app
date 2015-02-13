@@ -24,7 +24,7 @@
   h1{
     text-align: center;
   }
- p, ol, ul, td, li{
+  ol, ul, td, li{
    font-family: verdana, arial, helvetica, sans-serif;
    font-size: 13px;
    line-height: 18px;

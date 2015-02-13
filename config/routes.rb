@@ -12,10 +12,11 @@ Rails.application.routes.draw do
   get '/london_burger_map', to: "home#london_burger_map", as:'london_burger_map'
   resources :users
 
-  resources :ratings
 
-  resources :burgers
-
+  resources :burgers do
+    resources :ratings
+  end
+  
   resources :restaurants
 
   # The priority is based upon order of creation: first created -> highest priority.
