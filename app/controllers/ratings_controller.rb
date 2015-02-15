@@ -15,6 +15,7 @@ class RatingsController < ApplicationController
 
   # GET /ratings/new
   def new
+    
     @rating = @burger.ratings.new
   end
 

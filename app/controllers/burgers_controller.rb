@@ -5,11 +5,13 @@ class BurgersController < ApplicationController
   # GET /burgers.json
   def index
     @burgers = Burger.all
+    
   end
 
   # GET /burgers/1
   # GET /burgers/1.json
   def show
+
   end
 
   # GET /burgers/new
@@ -69,6 +71,6 @@ class BurgersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def burger_params
-      params.require(:burger).permit(:name, :price, :profile_picture)
+      params.require(:burger).permit(:name, :price, :profile_picture, :restaurant_name)
     end
 end

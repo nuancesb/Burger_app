@@ -16,6 +16,7 @@
         <td><%= burger.name %></td>
         <td><%= burger.price %></td>
         <td><%= burger.profile_picture %></td>
+        <%= link_to (image_tag burger.profile_picture.url(:detail), class: 'image'), burger %>
         <td><%= link_to 'Show', burger %></td>
         <td><%= link_to 'Edit', edit_burger_path(burger) %></td>
         <td><%= link_to 'Destroy', burger, method: :delete, data: { confirm: 'Are you sure?' } %></td>

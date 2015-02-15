@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'geocoder'
+gem 'simple_form'
 gem 'rmagick'
 gem 'carrierwave', '0.9.0'
 gem 'devise'

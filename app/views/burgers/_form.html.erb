@@ -10,7 +10,14 @@
       </ul>
     </div>
   <% end %>
-
+  <p>Choose a restaurant in the list or add a new one</p>
+  <div class="field">
+    <%= f.label :restaurant_name %><br>
+    <%= f.text_field :restaurant_name %>
+  </div>
+<p>Add a new restaurant</p>
+<%= link_to 'New Restaurant', new_restaurant_path %><br>
+<br>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -21,6 +28,9 @@
   </div>
  
 
+   
+
+  </div>
   <div class="field">
 
     <%= f.label :profile_picture, 'Select the image file or url:' %><br>
@@ -29,6 +39,8 @@
     <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
   </div>
   <br>
+  
+
   <div class="actions">
     <%= f.submit %>
   </div>

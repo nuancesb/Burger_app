@@ -5,6 +5,10 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript"
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyByj-EtXzoPac0cmbqjvfIF6ci2N9Y0P6U">
+      </script>
+  
 </head>
 <body>
 
@@ -23,8 +27,8 @@
       <li><%= link_to "My profile", user_path(current_user.id)  %></li>
       <li><a href='/about_us'>About Us</a></li>
      <li><%= link_to "Gallery", burgers_path  %></li>
-      <li><%= link_to "Review a burger", new_burger_path  %></li>
-      <li><a href='/london_burger_map'>London Burger Map</a></li>
+      <li><%= link_to "Review a new burger", new_burger_path  %></li>
+     <li><%= link_to "London Burger map", restaurants_path  %></li>
       <li><a href='/faq'>FAQ</a></li>
       <% end %>
     </ul>

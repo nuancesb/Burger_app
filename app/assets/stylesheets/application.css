@@ -89,3 +89,7 @@
     
    }
  }
+ #map-canvas { 
+   height: 22em; 
+   border: 1px solid black;
+ }
