@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'fog', '~> 1.3.1'
 gem 'geocoder'
 gem 'simple_form'
 gem 'rmagick'
