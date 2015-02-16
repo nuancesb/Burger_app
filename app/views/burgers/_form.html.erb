@@ -11,6 +11,12 @@
     </div>
   <% end %>
   <p>To review a new burger, you need to create one</p>
+ <p>First, choose a restaurant in the list or add a new one, <%= link_to 'New Restaurant', new_restaurant_path %></p>
+ <div class="field">
+   <%= f.label :restaurant_id, 'Restaurant' %><br>
+   <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name) %>
+ </div>
+
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -28,12 +34,8 @@
     <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
   </div>
   <br>
- <p>Choose a restaurant in the list or add a new one, <%= link_to 'New Restaurant', new_restaurant_path %></p>
   
-   <div class="field">
-     <%= f.label :restaurant_id, 'Restaurant' %><br>
-     <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name) %>
-   </div>
+   
 <br>
   <div class="actions">
     <%= f.submit %>

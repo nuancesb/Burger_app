@@ -11,7 +11,12 @@ class BurgersController < ApplicationController
   # GET /burgers/1
   # GET /burgers/1.json
   def show
-
+    @reviews = Rating.where(burger_id: @burger.id).order("created_at DESC")
+    if @reviews.blank?
+      @avg_review = 0
+    else
+      @avg_review = @reviews.average(:meat_rating).round(2)
+    end
   end
 
   # GET /burgers/new

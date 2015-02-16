@@ -30,7 +30,8 @@
   <strong>burgers rating:</strong><br>
   <% @burger.ratings.each do |rating| %>
     <tr>
-      <td>meat rating: <%= rating.meat_rating %></td><br>
+      <td>meat rating:  <%= @avg_review %> </td><br>
+     
       <td>cheese rating: <%= rating.cheese_rating %></td><br>
       <td>toppings rating: <%= rating.toppings_rating %></td><br>
       <td>bun_rating: <%= rating.bun_rating %></td><br>
