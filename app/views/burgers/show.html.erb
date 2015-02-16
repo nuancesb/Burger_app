@@ -25,10 +25,10 @@
     <%= 'No ratings yet! Add one!' %>
   <% else %>
     
- 
 
   <strong>burgers rating:</strong><br>
-  <% @burger.ratings.each do |rating| %>
+  <em><%= "#{@reviews.length} reviews" %></em><br>
+  <% @burger.ratings.limit(1).each do |rating| %>
     <tr>
       <td>meat rating: <%= @avg_review %></td><br>
 
