@@ -20,6 +20,12 @@
 
 
 <p>
+  <% if @burger.ratings.blank?%>
+    <%= 'No ratings yet! Add one!' %>
+  <% else %>
+    
+ 
+
   <strong>burgers rating:</strong><br>
   <% @burger.ratings.each do |rating| %>
     <tr>
@@ -31,6 +37,7 @@
 
     </tr>
       <% end %>
+    <% end %>
 </p>
 
 <%= link_to 'Add a review to this burger', new_burger_rating_path(@burger) %> |
