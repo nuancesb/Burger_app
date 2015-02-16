@@ -28,7 +28,7 @@
     <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
   </div>
   <br>
- <p>Choose a restaurant in the list or add a new one</p>
+ <p>Choose a restaurant in the list or add a new one, <%= link_to 'New Restaurant', new_restaurant_path %></p>
   
    <div class="field">
      <%= f.label :restaurant_id, 'Restaurant' %><br>
