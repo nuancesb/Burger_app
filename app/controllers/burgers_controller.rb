@@ -25,9 +25,11 @@ class BurgersController < ApplicationController
 
   # POST /burgers
   # POST /burgers.json
-  def create
-    @burger = Burger.new(burger_params)
 
+  def create
+
+    @burger = Burger.new(burger_params)
+   
     respond_to do |format|
       if @burger.save
         format.html { redirect_to @burger, notice: 'Burger was successfully created.' }
@@ -71,6 +73,6 @@ class BurgersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def burger_params
-      params.require(:burger).permit(:name, :price, :profile_picture, :restaurant_name, {restaurant_ids: []} )
+      params.require(:burger).permit(:name, :price, :profile_picture, :restaurant_name, :restaurant_id)
     end
 end

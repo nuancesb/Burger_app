@@ -29,14 +29,12 @@
   </div>
   <br>
  <p>Choose a restaurant in the list or add a new one</p>
-  <div>
-      <% Restaurant.all.each do |restaurant| %>
-        <%= check_box_tag "restaurant_ids[]", restaurant.id %>
-        <%= f.label :restaurant_ids, restaurant.name %>
-        <br>
-      <% end %>
+  
+   <div class="field">
+     <%= f.label :restaurant_id, 'Restaurant' %><br>
+     <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name) %>
    </div>
-
+<br>
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'pry-byebug'
 gem 'fog', '~> 1.3.1'
 gem 'geocoder'
 gem 'simple_form'
