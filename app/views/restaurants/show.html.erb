@@ -10,15 +10,21 @@
   <%= @restaurant.postcode %>
 </p>
 
+
 <p>
   <strong>Latitude:</strong>
-  <%= @restaurant.latitude %>
+  <span id="latitude">
+    <%= @restaurant.latitude %>
+  </span>
 </p>
 
 <p>
   <strong>Longitude:</strong>
+  <span id="longitude">
   <%= @restaurant.longitude %>
+</span>
 </p>
+
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
 <%= link_to 'Back', restaurants_path %>

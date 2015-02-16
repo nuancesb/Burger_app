@@ -1,7 +1,5 @@
 <h1>Listing restaurants</h1>
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="main.js" type="text/javascript"></script></head>
+
   <body>
     <section id='map-canvas'></section>
   </body>
@@ -18,11 +16,9 @@
 
   <tbody>
     <% @restaurants.each do |restaurant| %>
-      <tr>
+      <tr class='restaurant' data-name='<%= restaurant.name %>' data-latitude='<%= restaurant.latitude %>' data-longitude='<%= restaurant.longitude %>' >
         <td><%= restaurant.name %></td>
         <td><%= restaurant.postcode %></td>
-        <td><%= restaurant.latitude %></td>
-        <td><%= restaurant.longitude %></td>
         <td><%= link_to 'Show', restaurant %></td>
         <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
         <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
