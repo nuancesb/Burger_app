@@ -15,7 +15,10 @@ class BurgersController < ApplicationController
     if @reviews.blank?
       @avg_review = 0
     else
-      @avg_review = @reviews.average(:meat_rating).round(2)
+      @avg_review_meat = @reviews.average(:meat_rating).round(2)
+      @avg_review_cheese = @reviews.average(:cheese_rating).round(2)
+      @avg_review_toppings = @reviews.average(:topping_rating).round(2)
+      @avg_review_bun = @reviews.average(:bun_rating).round(2)
     end
   end
 
