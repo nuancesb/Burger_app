@@ -20,10 +20,6 @@
     <%= f.text_field :price %>
   </div>
  
-
-   
-
-  </div>
   <div class="field">
 
     <%= f.label :profile_picture, 'Select the image file or url:' %><br>
@@ -33,7 +29,13 @@
   </div>
   <br>
  <p>Choose a restaurant in the list or add a new one</p>
-  
+  <div>
+      <% Restaurant.all.each do |restaurant| %>
+        <%= check_box_tag "restaurant_ids[]", restaurant.id %>
+        <%= f.label :restaurant_ids, restaurant.name %>
+        <br>
+      <% end %>
+   </div>
 
   <div class="actions">
     <%= f.submit %>
