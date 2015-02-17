@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'cancancan'
 gem 'rails_12factor', group: :production
 gem 'jquery-turbolinks'
 gem 'pry-byebug'
