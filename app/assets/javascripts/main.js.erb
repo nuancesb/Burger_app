@@ -1,14 +1,18 @@
-   $(document).ready(function() {
+
+  $(document).ready(function() {
+
     $('.star-rating').raty({
-      path: '/assets/',
+      half     : true,
+      starHalf : '<%= asset_path 'star-half.png' %>',
+      starOff : '<%= asset_path 'star-off.png' %>',
+      starOn  : '<%= asset_path 'star-on.png' %>',
       readOnly: true,
       score: function() {
         return $(this).attr('data-score');
       }
 
     });
-  });
-   $(document).ready(function() {
+
   
      $('#star-rating-meat').raty({
        path: '/assets/',
