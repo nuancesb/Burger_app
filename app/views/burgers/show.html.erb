@@ -30,7 +30,8 @@
   <em><%= "#{@reviews.length} reviews" %></em><br>
   <% @burger.ratings.limit(1).each do |rating| %>
     <tr>
-      <td>meat rating: <%= @avg_review_meat %></td><br>
+      <td>meat rating:</td>
+       <div class="star-rating" data-score= <%= @avg_review_meat %>></div><br>
 
       <td>cheese rating: <%= @avg_review_cheese %></td><br>
       <td>toppings rating: <%= @avg_review_toppings %></td><br>
@@ -45,3 +46,4 @@
 <%= link_to 'Add a review to this burger', new_burger_rating_path(@burger) %> |
 <%= link_to 'review a new burger', new_burger_path %> |
 <%= link_to 'Back', burgers_path %>
+
