@@ -19,17 +19,17 @@
    
   </div>
   <div class="field">
-    <%= f.label :cheese_rating %><br>
-    <%= f.number_field :cheese_rating %>
+    <%= f.label :cheese_rating,"Cheeseeness"%><br>
+    <div id="star-rating-cheese"></div>
   </div>
   <div class="field">
-    <%= f.label :toppings_rating %><br>
-    <%= f.number_field :toppings_rating %>
+    <%= f.label :toppings_rating, "Toppinginess" %><br>
+    <div id="star-rating-toppings"></div>
   </div>
   <div class="field">
-    <%= f.label :bun_rating %><br>
-    <%= f.number_field :bun_rating %>
-  </div>
+    <%= f.label :bun_rating, "Buniness" %><br>
+    <div id="star-rating-bun"></div>
+  </div><br>
   <div class="actions">
     <%= f.submit %>
   </div>
