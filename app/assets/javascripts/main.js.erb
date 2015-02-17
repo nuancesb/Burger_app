@@ -1,36 +1,35 @@
 
-  $(document).ready(function() {
+$(document).ready(function() {
 
-    $('.star-rating').raty({
-      half     : true,
-      starHalf : '<%= asset_path 'star-half.png' %>',
-      starOff : '<%= asset_path 'star-off.png' %>',
-      starOn  : '<%= asset_path 'star-on.png' %>',
-      readOnly: true,
-      score: function() {
-        return $(this).attr('data-score');
-      }
-
-    });
+  $('.star-rating').raty({
+    half     : true,
+    starHalf : '<%= asset_path 'star-half.png' %>',
+    starOff  : '<%= asset_path 'star-off.png' %>',
+    starOn   : '<%= asset_path 'star-on.png' %>',
+    readOnly : true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
 
   
-     $('#star-rating-meat').raty({
-       path: '/assets/',
-       scoreName: 'rating[meat_rating]'
-     });
+  $('#star-rating-meat').raty({
+   path: '/assets/',
+   scoreName: 'rating[meat_rating]'
+ });
 
-     $('#star-rating-cheese').raty({
-       path: '/assets/',
-       scoreName: 'rating[cheese_rating]'
-     });
+  $('#star-rating-cheese').raty({
+   path: '/assets/',
+   scoreName: 'rating[cheese_rating]'
+ });
 
-     $('#star-rating-toppings').raty({
-            path: '/assets/',
-            scoreName: 'rating[toppings_rating]'
-          });
+  $('#star-rating-toppings').raty({
+    path: '/assets/',
+    scoreName: 'rating[toppings_rating]'
+  });
 
-     $('#star-rating-bun').raty({
-            path: '/assets/',
-            scoreName: 'rating[bun_rating]'
-          });
-   });
+  $('#star-rating-bun').raty({
+    path: '/assets/',
+    scoreName: 'rating[bun_rating]'
+  });
+});
