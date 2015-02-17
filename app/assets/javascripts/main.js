@@ -8,3 +8,10 @@
 
     });
   });
+   $(document).ready(function() {
+  
+     $('#star-rating-meat').raty({
+       path: '/assets/',
+       scoreName: 'rating[meat_rating]'
+     });
+   });

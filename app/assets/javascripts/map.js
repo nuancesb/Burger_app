@@ -20,8 +20,10 @@ myMap.initialize = function() {
 };
 
 $(document).ready(function() {
-  myMap.mapCanvas = $('#map-canvas')[0];
-  myMap.initialize();
+  if ($('#map-canvas').length > 0) {
+    myMap.mapCanvas = $('#map-canvas')[0];
+    myMap.initialize();  
+  }
 
   if($('.restaurant')) {
 
