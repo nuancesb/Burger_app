@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+gem 'jquery-turbolinks'
 gem 'pry-byebug'
 gem 'fog', '~> 1.3.1'
 gem 'geocoder'
