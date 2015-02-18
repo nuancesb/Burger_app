@@ -10,17 +10,18 @@
       </ul>
     </div>
   <% end %>
-  <p>To review a new burger, you need to create one</p>
- <p>First, choose a restaurant in the list or add a new one, <%= link_to 'New Restaurant', new_restaurant_path %></p>
+  <p>To review a new burger, you need to create one : </p>
+ <p>First, choose a restaurant in the list or add a new one <%= link_to 'Here', new_restaurant_path %></p>
  <div class="field">
-   <%= f.label :restaurant_id, 'Restaurant' %><br>
+   <%= f.label :restaurant_id, 'Restaurant (choose in the list below)' %><br>
    <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name) %>
  </div>
 
-  <div class="field">
-    <%= f.label :name %><br>
+  <br><div class="field">
+    <%= f.label :name, "Burger's name" %><br>
     <%= f.text_field :name %>
   </div>
+  <br>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
@@ -28,18 +29,19 @@
  
   <div class="field">
 
-    <%= f.label :profile_picture, 'Select the image file or url:' %><br>
+    <br><%= f.label :profile_picture, 'Select the image file or url:' %><br>
     
     <%= f.file_field :profile_picture %>
     <%= f.text_field :remote_image_url, value: nil, placeholder: 'or paste url here' %>
   </div>
-  <br>
+
   
    
 <br>
   <div class="actions">
     <%= f.submit %>
   </div>
+  <br>
 
 <% end %>
 

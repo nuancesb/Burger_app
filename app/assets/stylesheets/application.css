@@ -13,180 +13,243 @@
  *= require_self
  */
 
+ /* 
+  red: #d7280f; 
+  yellow: #ffc904;
 
+ */
+
+
+ /**************************************/
+ /*               Body                 */
+ /**************************************/
 
  body {
-     // text-align: center;
+   color: #222;
+   /*background: url(slate.jpg) no-repeat center center fixed;
+   -moz-background-size: cover;
+   -webkit-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;*/
+   background: #f6ebc3;
+   margin: 0;
+   font-family: Arial, Helvetica, sans-serif;
+ }
 
-     color: white;
-     color: rgba(255, 255, 255, 0.8);
-     background: url(slate.jpg) no-repeat center center fixed;
-     -moz-background-size: cover;
-     -webkit-background-size: cover;
-     -o-background-size: cover;
-     background-size: cover;
-     margin: 0;
+/* a {
+  color: white;
+  background: #d7280f;
+  padding: 10px 30px;
+  border-radius: 3px;
+ }*/
 
-   }
-  h1{
-    text-align: center;
-  }
-.container{
+ /**************************************/
+ /*             Navigation             */
+ /**************************************/
+
+ header {
+   background: #d7280f;
+ }
+
+ nav {
+   font-family: 'Montserrat', sans-serif;
+   width: 960px;
+   margin: 0 auto;
+ }
+
+ nav ul {
+   padding: 0;
+   margin: 0 auto;
+   height: 80px;
+   line-height: 80px;
+   clear: both;
+ }
+
+ nav ul li {
+   font-size: 18px;
+   list-style-type: none;
+   display: inline-block;
+   float: left;
+ }
+
+ nav ul li:first-child a {
+   color: white;
+   padding-left: 0;
+ }
+
+ nav ul li:last-child a {
+   padding-right: 0;
+ }
+
+ nav ul li.right {
+   float: right;
+   text-align: right;
+ }
+
+ nav ul li a {
+   color: #ffc904;
+   text-decoration: none;
+   padding-right: 17px;
+ }
+
+ nav ul li a:hover {
+   color: white;
+ }
+
+ nav ul li img {
+   vertical-align: middle;
+   display: inline-block;
+   border-radius: 100%;
+   padding: 0 10px;
+ }
+
+ /**************************************/
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+/**************************************/
+
+ol, ul, li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+/**************************************/
+
+table {
+  width: 100%;
+}
+
+tr {
+  height: 50px;
+}
+
+
+tr a {
+  float: right;
+}
+
+/**************************************/
+
+.container {
   width: 960px;
   margin:0 auto;
-  font-family: 'Coming Soon', cursive;
 }
-   header {
-    background-color: black;
-    padding-left: 10px;
-  }
 
-  nav {
-    font-family: 'Fredericka the Great',cursive;
-    float: left;
-    width: 90%;
-  }
+p {
+  font-size: 20px;
+}
 
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding-right: 17px;
+.container {
+  clear: both;
+}
 
-  }
-  nav ul {
-    padding-left: 0px;
+.left {
+  float: left;
+}
 
-  }
+aside {
+  float: right;
+  min-width: 320px;
+}
 
-  nav ul li {
-    display: inline-block;
-
-
-  }
-  // h1{
-  //   text-align: center;
-
-  // }
-  ol, ul, td, li{
-   font-size: 30px;
-   color: white;
-   list-style: none;
-   display:inline-block;
-
- }
 a:link{
   text-decoration: none;
 }
- pre {
-   background-color: #eee;
-   padding: 10px;
-   font-size: 11px;
- }
 
- // a {
- //   color: #000;
- //   &:visited {
- //     color: #666;
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
 
- //   }
- //   &:hover {
- //     color: #fff;
- //     background-color: #000;
+#notice {
+  color: green;
+}
 
- //   }
- // }
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
 
- // div {
- //   &.field, &.actions {
- //     margin-bottom: 10px;
- //   }
- // }
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
 
- #notice {
-   color: green;
- }
+h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
 
- .field_with_errors {
-   padding: 2px;
-   background-color: red;
-   display: table;
- }
-
- #error_explanation {
-   width: 450px;
-   border: 2px solid red;
-   padding: 7px;
-   padding-bottom: 0;
-   margin-bottom: 20px;
-   background-color: #f0f0f0;
- }
- h2 {
-   text-align: left;
-   font-weight: bold;
-   padding: 5px 5px 5px 15px;
-   font-size: 12px;
-   margin: -7px;
-   margin-bottom: 0px;
-   background-color: #c00;
-   color: #fff;
- }
-
-   // ul li  {
-   //   font-size: 12px;
-   //   list-style: square;
-
-   // }
 .table {
   display:inline-block;
 }
-   #map-canvas { 
 
-     height: 22em; 
-     border: 10px solid black;
-   }
+#map-canvas { 
+  height: 22em; 
+  border: 10px solid black;
+}
 
-   .login {
-    float: right;
-    width:10%;
-  }
-  .login img {
-    display: block;
-    float: left;
-    padding-right: 20px;
-    margin: 20px 0;
-  }
+.login {
+  float: right;
+  width:10%;
+}
 
-  .login a {
-    display: block;
-    float: left;
-    margin: 41px 0;
-  }
+.login img {
+  display: block;
+  float: left;
+  padding-right: 20px;
+  margin: 20px 0;
+}
 
-  .cf:before,
-  .cf:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
-    }
+.login a {
+  display: block;
+  float: left;
+  margin: 41px 0;
+}
 
-    .cf:after {
-      clear: both;
-    }
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
 
-  /**
-   * For IE 6/7 only
-   * Include this rule to trigger hasLayout and contain floats.
-   */
-   .cf {
-    *zoom: 1;
-  }
+.cf:after {
+  clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
 
   
-  h3{
-    // font-family: 'Fredericka the Great',cursive;
-    padding: 2px;
-    text-align: center;
-    font-size: 15px;
-  }
+h3{
+  padding: 2px;
+  text-align: center;
+  font-size: 15px;
+}
 .image{
   padding:10px;
 }
@@ -273,5 +336,3 @@ a:link{
   border-width: 0 2px;
   /* border only on right and left sides */
 }
-
-

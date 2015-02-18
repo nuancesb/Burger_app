@@ -1,53 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="left">
+  <p>
+    <%= image_tag @burger.profile_picture.detail.url %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @burger.name %>
-</p>
-<p>
-  <strong>Restaurant name:</strong><br>
-  <%= @burger.restaurant.name %>
+  <p>
+    <strong>Burger's name:</strong>
+    <%= @burger.name %>
+  </p>
+  <p>
+    <strong>Restaurant name:</strong>
+    <%= @burger.restaurant.name %>
+  </p>
+  <p>
+    <strong>Price:</strong>
+    £ <%= @burger.price %>
+  </p>
 
-</p>
-<p>
-  <strong>Price:</strong>
-  £<%= @burger.price %>
-</p>
+  <%= link_to 'Add a review to this burger', new_burger_rating_path(@burger) %> |
+  <%= link_to 'review a new burger', new_burger_path %> |
+  <%= link_to 'Back', burgers_path %>
 
-<p>
-  <strong>picture:</strong>
-  <%= image_tag @burger.profile_picture.detail.url %>
-</p>
-
-
-<p>
-  <% if @burger.ratings.blank?%>
-    <%= 'No ratings yet! Add one!' %>
-  <% else %>
-    
-
-  <strong>burgers rating:</strong><br>
-  <em><%= "#{@reviews.length} reviews" %></em><br>
-  <% @burger.ratings.limit(1).each do |rating| %>
-    <tr>
-      <td>meat rating:</td> 
-      <div class="star-rating" data-score="<%= @avg_review_meat %>"></div><br>
-      
-      <td>cheese rating:</td> 
-      <div class="star-rating" data-score="<%= @avg_review_cheese %>"></div><br>
-      <td>toppings rating:</td> 
-      <div class="star-rating" data-score="<%= @avg_review_toppings %>"></div><br>
-      <td>bun rating:</td> 
-      <div class="star-rating" data-score="<%= @avg_review_bun %>"></div><br>
-      <!-- <td>user email:</td>
-      <%= rating.user.email %></div><br> -->
-
-    </tr>
+</div>
+<aside class="right">
+  <p>
+    <% if @burger.ratings.blank?%>
+      <%= 'No ratings yet! Add one!' %>
+    <% else %>
+      <strong>burgers rating:</strong><br>
+      <em><%= "#{@reviews.length} reviews" %></em><br>
+      <% @burger.ratings.limit(1).each do |rating| %>
+        <tr>
+          <td>meat rating:</td> 
+          <div class="star-rating" data-score="<%= @avg_review_meat %>"></div><br>
+          <td>cheese rating:</td> 
+          <div class="star-rating" data-score="<%= @avg_review_cheese %>"></div><br>
+          <td>toppings rating:</td> 
+          <div class="star-rating" data-score="<%= @avg_review_toppings %>"></div><br>
+          <td>bun rating:</td> 
+          <div class="star-rating" data-score="<%= @avg_review_bun %>"></div><br>
+          <!-- <td>user email:</td>
+          <%= rating.user.email %></div><br> -->
+        </tr>
       <% end %>
     <% end %>
-</p>
-
-<%= link_to 'Add a review to this burger', new_burger_rating_path(@burger) %> |
-<%= link_to 'review a new burger', new_burger_path %> |
-<%= link_to 'Back', burgers_path %>
-
+  </p>
+</aside>
