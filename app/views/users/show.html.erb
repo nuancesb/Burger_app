@@ -3,17 +3,16 @@
   <%= image_tag @user.image.thumb.url %>
 </p> -->
 <p>
-  <!-- <b>Image:</b> -->
   <%= image_tag @user.image.detail.url %>
 </p>
 <br>
 <p> <b>Who are you...:</b>
   <%= @user.description %>
-<p>
+</p>
 <br>
-<% if @user == current_user %>
-
-<li><%= link_to "Edit", edit_user_registration_path(@user)%></li>
-<li><%= link_to 'Back to home', root_path %><li>
-<% end %>
-
+<div class="profile">
+  <% if @user == current_user %>
+  <li><%= link_to "Edit your profile", edit_user_registration_path(@user)%></li> <li>   |    </li>
+  <li><%= link_to 'Back to home', root_path %></li>
+    <% end %>
+  </div>
