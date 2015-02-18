@@ -12,17 +12,10 @@
     <tr class='restaurant' data-name='<%= restaurant.name %>' data-latitude='<%= restaurant.latitude %>' data-longitude='<%= restaurant.longitude %>' >
       <td><%= restaurant.name %></td>
       <td><%= restaurant.postcode %></td>
-      <td><%= link_to 'Show', restaurant %></td>
-      <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-      <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <!-- <td><%= link_to 'Show', restaurant %></td>
+      <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td> -->
+      <td><%= link_to 'Delete', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-
-</html>
-
-<%= link_to 'New Restaurant', new_restaurant_path %>

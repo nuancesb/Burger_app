@@ -20,13 +20,13 @@
           <li><%= link_to "Review Burger", new_burger_path  %></li>
           <li><a href='/about_us'>About</a></li>
           
-          
           <li class="right"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+          <li class="right"><%= link_to "Settings", edit_user_registration_path(@user)%></li>
           <li class="right"><%= image_tag current_user.image.thumb.url %></li>
           <li class="right"><%= link_to "Profile", user_path(current_user.id)  %></li>
         <%else %>
-          <li><%= link_to "Log In", new_user_session_path %></li>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li class="right"><%= link_to "Log In", new_user_session_path %></li>
+          <li class="right"><%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
       </ul>
     </nav>

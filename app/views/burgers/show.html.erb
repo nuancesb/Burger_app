@@ -1,3 +1,4 @@
+
 <div class="left">
   <p>
     <%= image_tag @burger.profile_picture.detail.url %>
@@ -26,17 +27,17 @@
     <% if @burger.ratings.blank?%>
       <%= 'No ratings yet! Add one!' %>
     <% else %>
-      <strong>burgers rating:</strong><br>
+      <strong>Burger Ratings:</strong><br>
       <em><%= "#{@reviews.length} reviews" %></em><br>
       <% @burger.ratings.limit(1).each do |rating| %>
-        <tr>
-          <td>meat rating:</td> 
+        <tr><br>
+          <td>Meatiness:</td> 
           <div class="star-rating" data-score="<%= @avg_review_meat %>"></div><br>
-          <td>cheese rating:</td> 
+          <td>Cheeseeness:</td> 
           <div class="star-rating" data-score="<%= @avg_review_cheese %>"></div><br>
-          <td>toppings rating:</td> 
+          <td>Toppinginness:</td> 
           <div class="star-rating" data-score="<%= @avg_review_toppings %>"></div><br>
-          <td>bun rating:</td> 
+          <td>Buniness:</td> 
           <div class="star-rating" data-score="<%= @avg_review_bun %>"></div><br>
           <!-- <td>user email:</td>
           <%= rating.user.email %></div><br> -->

@@ -10,9 +10,3 @@
   <%= @user.description %>
 </p>
 <br>
-<div class="profile">
-  <% if @user == current_user %>
-  <li><%= link_to "Edit your profile", edit_user_registration_path(@user)%></li> <li>   |    </li>
-  <li><%= link_to 'Back to home', root_path %></li>
-    <% end %>
-  </div>

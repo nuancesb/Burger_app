@@ -63,6 +63,7 @@
    height: 80px;
    line-height: 80px;
    clear: both;
+   width: 100%;
  }
 
  nav ul li {
@@ -75,6 +76,7 @@
  nav ul li:first-child a {
    color: white;
    padding-left: 0;
+   font-size: 24px;
  }
 
  nav ul li:last-child a {
@@ -134,6 +136,29 @@ tr {
 tr a {
   float: right;
 }
+
+/**************************************/
+
+input {
+  display: block;
+}
+
+input[type=text],input[type=password],input[type=email],input[type=file], select {
+  height: 20px;
+  line-height: 20px;
+  margin: 10px 0;
+  min-width: 320px;
+}
+
+input[type=submit] {
+  background-color: red;
+  color:yellow;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius:5px;
+  border:none;
+}
+
 
 /**************************************/
 
