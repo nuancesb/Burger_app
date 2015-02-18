@@ -1,30 +1,21 @@
-<h1>Listing restaurants</h1>
+<h1>Find on the map the restaurant already reviewed</h1>
 
-  <body>
+<section id='map-canvas'></section>
 
-    <section id='map-canvas'></section>
-    
-  </body>
 <table>
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Postcode</th>
-      <th>Latitude</th>
-      <th>Longitude</th>
-      <th colspan="3"></th>
-    </tr>
+    <th colspan="3"></th>
   </thead>
 
   <tbody>
     <% @restaurants.each do |restaurant| %>
-      <tr class='restaurant' data-name='<%= restaurant.name %>' data-latitude='<%= restaurant.latitude %>' data-longitude='<%= restaurant.longitude %>' >
-        <td><%= restaurant.name %></td>
-        <td><%= restaurant.postcode %></td>
-        <td><%= link_to 'Show', restaurant %></td>
-        <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
-        <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+    <tr class='restaurant' data-name='<%= restaurant.name %>' data-latitude='<%= restaurant.latitude %>' data-longitude='<%= restaurant.longitude %>' >
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.postcode %></td>
+      <td><%= link_to 'Show', restaurant %></td>
+      <td><%= link_to 'Edit', edit_restaurant_path(restaurant) %></td>
+      <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
     <% end %>
   </tbody>
 </table>
