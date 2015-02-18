@@ -13,13 +13,16 @@
     <% @burgers.each do |burger| %>
       <tr>
         <td><%= burger.name %></td>
-        
+      <div class="taped-up">
+          
+   
         <%= link_to (image_tag burger.profile_picture.url(:detail), class: 'image'), burger %>
-        <!-- <td><%= link_to 'Show', burger %></td>
-        <td><%= link_to 'Edit', edit_burger_path(burger) %></td>
-        <td><%= link_to 'Destroy', burger, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+         <td><%= link_to 'Show', burger %></td>
+        <td><%= link_to 'Edit', edit_burger_path(burger) %></td> 
+        <td><%= link_to 'Destroy', burger, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
       </tr>
     <% end %>
+  </div>
   </tbody>
 </table>
 
