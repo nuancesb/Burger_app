@@ -26,6 +26,9 @@
         <li><%= link_to "Review a new burger", new_burger_path  %></li>
         <li><%= link_to "London Burger map", restaurants_path  %></li>
         <li><a href='/faq'>FAQ</a></li>
+<%else %>
+<li><%= link_to "Log In", new_user_session_path %></li>
+<li><%= link_to "Sign up", new_user_registration_path %></li>
 
         <% end %>
       </ul>
