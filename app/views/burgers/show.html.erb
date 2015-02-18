@@ -6,11 +6,11 @@
 
   <p>
     <strong>Burger's name:</strong>
-    <%= @burger.name %>
+    <%= @burger.try :name %>
   </p>
   <p>
     <strong>Restaurant name:</strong>
-    <%= @burger.restaurant.name %>
+    <%= @burger.restaurant.try :name %>
   </p>
   <p>
     <strong>Price:</strong>
