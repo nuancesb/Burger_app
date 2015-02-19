@@ -10,8 +10,7 @@
       </ul>
     </div>
   <% end %>
-  <p>To review a new burger, you need to create one : </p>
- <p>First, choose a restaurant in the list or add a new one <%= link_to 'Here', new_restaurant_path %></p>
+ <p>Choose a restaurant in the list below or add a new one <%= link_to 'Here', new_restaurant_path %></p>
  <div class="field">
    <%= f.label :restaurant_id, 'Restaurant (choose in the list below)' %><br>
    <%= f.collection_select(:restaurant_id, Restaurant.all, :id, :name) %>
