@@ -1,6 +1,8 @@
 class BurgersController < ApplicationController
   before_action :set_burger, only: [:show, :edit, :update, :destroy]
 
+  authorize_resource
+
   # GET /burgers
   # GET /burgers.json
   def index
@@ -37,7 +39,7 @@ class BurgersController < ApplicationController
   def create
 
     @burger = Burger.new(burger_params)
-   
+    @burger.user_id = current_user.id
     respond_to do |format|
       if @burger.save
         format.html { redirect_to @burger, notice: 'Burger was successfully created.' }

@@ -6,8 +6,9 @@
          <!-- <td><%= link_to 'Show', burger %></td> -->
          <!-- <td><%= link_to 'Edit', edit_burger_path(burger) %></td>  -->
         <%= link_to burger.name, burger_path(burger) %>
-        <td><%= link_to 'delete', burger, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-
+        <% if can? :destroy, burger %>
+          <td><%= link_to 'delete', burger, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+        <% end %>
     </div>
   <% end %>
 </div>

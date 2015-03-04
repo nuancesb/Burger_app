@@ -6,7 +6,13 @@ class Ability
             if user.role? :admin
                 can :manage, :all
             else
-                can :read, Recipe
+                can :read, :all
+                can :create, Restaurant
+                can :create, Burger
+                can :create, Rating
+                can :update, Burger, user_id: user.id
+                can :destroy, Burger, user_id: user.id 
+
             end
     
     end

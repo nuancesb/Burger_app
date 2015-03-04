@@ -1,3 +1,5 @@
+
+
 Rails.application.routes.draw do
 
 
@@ -11,7 +13,7 @@ Rails.application.routes.draw do
   get '/faq', to: "home#faq", as:'faq'
   get '/london_burger_map', to: "home#london_burger_map", as:'london_burger_map'
 
-  resources :users
+  resources :users, only: [:show, :index]
 
 
   resources :burgers do
