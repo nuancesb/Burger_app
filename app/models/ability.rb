@@ -11,7 +11,8 @@ class Ability
                 can :create, Burger
                 can :create, Rating
                 can :update, Burger, user_id: user.id
-                can :destroy, Burger, user_id: user.id 
+                can :destroy, Burger, user_id: user.id
+                can :destroy, Restaurant, user_id: user.id  
             else
 
             end
