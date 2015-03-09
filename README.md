@@ -13,19 +13,3 @@ This project was built using Ruby on Rails, Javascript, Jquery and various gems 
 ## Website
 https://medium-rare.herokuapp.com
 
-
-
-
-
-
-
-
-
-
-
-A burger review website allowing users to sign in, access a burger
-gallery, rate existing or new burgers from existing restaurants or add a
-new restaurant and rate its burgers. All restaurants get automatically
-located on a map visible to all users. Project built using Ruby on Rails,
-Javascript, Jquery and various gems such as Rmagick, Carrierwave,
-Geocoder, Devise. Styling done using CSS.
